@@ -9,11 +9,19 @@ import com.github.martinfrank.javarouge.view.RougeView;
 public class Launcher {
 
     public static void main(String[] args) {
-
-
         RougeGame model = new RougeGame();
-        RougeView<String> view = client -> {
+        RougeView<String> view = new RougeView<String>() {
+            @Override
+            public String display() {
+                return null;
+            }
+
+            @Override
+            public void update(RougeGame model) {
+
+            }
         };
+
         RougeController<String> controller = new RougeController<>(view, model);
 
         SaveGame saveGame = new SaveGame(new Player("mosh"));

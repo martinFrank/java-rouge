@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="java-rouge-javafx" />
+        <module name="fightlib" />
         <module name="java-rouge" />
+        <module name="java-rouge-javafx" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="fightlib" target="1.8" />
       <module name="java-rouge" target="8" />
       <module name="java-rouge-javafx" target="9" />
       <module name="java-rouge-swt" target="9" />

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../fight-lib/fightlib.iml" filepath="$PROJECT_DIR$/../fight-lib/fightlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-rouge.iml" filepath="$PROJECT_DIR$/java-rouge.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../java-rouge-javafx/java-rouge-javafx.iml" filepath="$PROJECT_DIR$/../java-rouge-javafx/java-rouge-javafx.iml" />
     </modules>
   </component>
 </project>

@@ -7,6 +7,6 @@ public class MapUtils {
     public static RougeMap createMap(int width, int height) {
         RougeMapPartFactory mapPartFactory = new RougeMapPartFactory();
         RougeMapFactory mapFactory = new RougeMapFactory(mapPartFactory);
-        return mapFactory.createMap(width, height, MapStyle.SQUARE);
+        return mapFactory.createMap(width, height, MapStyle.SQUARE4);
     }
 }
