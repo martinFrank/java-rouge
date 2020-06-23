@@ -6,8 +6,8 @@ import com.github.martinfrank.javarouge.model.mapdata.RougeMapData;
 import com.github.martinfrank.maplib.Map;
 import com.github.martinfrank.maplib.MapStyle;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class RougeMap extends Map<RougeMapData, RougeMapField, RougeMapEdge, RougeMapNode, RougeMapWalker> {
 
@@ -20,9 +20,10 @@ public class RougeMap extends Map<RougeMapData, RougeMapField, RougeMapEdge, Rou
         getEntities().forEach(e -> e.turnTime(turnTime, player, this));
     }
 
-    @SuppressWarnings("unchecked")
     private List<Entity> getEntities() {
-        List<?> list = getFields().stream().map(f -> f.getData().getEntities()).collect(Collectors.toList());
-        return (List<Entity>) list;
+        List<Entity> entities = new ArrayList<>();
+        getFields().forEach(f -> entities.addAll(f.getData().getEntities()));
+        return entities;
     }
+
 }

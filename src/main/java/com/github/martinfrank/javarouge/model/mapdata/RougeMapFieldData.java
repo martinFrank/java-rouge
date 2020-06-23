@@ -12,6 +12,7 @@ public class RougeMapFieldData {
     private Terrain terrain;
     private Structure structure;
     private Collection<Entity> entities = new ArrayList<>();
+    private boolean mazeGenerationVisited;
 
     public Terrain getTerrain() {
         return terrain;
@@ -31,5 +32,13 @@ public class RougeMapFieldData {
 
     public Collection<Entity> getEntities() {
         return entities;
+    }
+
+    public void setMazeGenerationVisited(boolean visited) {
+        mazeGenerationVisited = visited;
+    }
+
+    public boolean isMazeGenerationVisited() {
+        return mazeGenerationVisited;
     }
 }

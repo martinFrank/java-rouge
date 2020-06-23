@@ -6,7 +6,7 @@ import com.github.martinfrank.javarouge.model.map.RougeMap;
 public class Entity {
 
     private double turnTime;
-    private final double velocity = 1;
+    private final double velocity = 1.65567;
 
     public void turnTime(double turnTime, Player player, RougeMap rougeMap) {
         this.turnTime = this.turnTime + turnTime;

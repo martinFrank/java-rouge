@@ -15,7 +15,7 @@ public class SaveGame {
 
     public SaveGame(Player player) {
         this.player = player;
-        currentMap = MapUtils.createMap(32, 32);
+        currentMap = MapUtils.createMap(31, 31);
     }
 
     public Player getPlayer() {
