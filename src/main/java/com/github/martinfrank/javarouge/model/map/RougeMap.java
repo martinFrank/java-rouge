@@ -26,4 +26,12 @@ public class RougeMap extends Map<RougeMapData, RougeMapField, RougeMapEdge, Rou
         return entities;
     }
 
+    //Walk is ALWAYS ONE STEP (from one field to an adjected)
+    public boolean canWalk(Player player, RougeMapField start, RougeMapField target) {
+        List<RougeMapField> path = aStar(start, target, player.getWalker(), 100);
+        if (path.size() == 2) {
+            return true;
+        }
+        return false;
+    }
 }

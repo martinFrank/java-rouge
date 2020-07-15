@@ -85,6 +85,12 @@
             <version>0.2.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.martinfrank</groupId>
+            <artifactId>java-rouge-objects</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
 
     </dependencies>
 

@@ -1,7 +1,13 @@
 package com.github.martinfrank.javarouge.model.maze;
 
+import com.github.martinfrank.javarouge.model.map.HumanWalker;
 import com.github.martinfrank.javarouge.model.map.RougeMap;
+import com.github.martinfrank.javarouge.model.map.RougeMapField;
 import com.github.martinfrank.javarouge.model.mapdata.RougeMapFieldData;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class MazeGeneratorUtil {
 
@@ -34,5 +40,17 @@ public class MazeGeneratorUtil {
             default:
                 return new BigRoomGenerator();
         }
+    }
+
+    public static RougeMapField getRandomStartPosition(RougeMap currentMap) {
+        List<RougeMapField> fields = new ArrayList<>(currentMap.getFields());
+        Collections.shuffle(fields);
+        HumanWalker walker = new HumanWalker();
+        for (RougeMapField field : fields) {
+            if (walker.canEnter(field, field)) {
+                return field;
+            }
+        }
+        return fields.get(0);
     }
 }

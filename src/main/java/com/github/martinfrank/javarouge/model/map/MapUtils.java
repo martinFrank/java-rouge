@@ -1,6 +1,6 @@
 package com.github.martinfrank.javarouge.model.map;
 
-import com.github.martinfrank.javarouge.model.maze.MazeGeneratorUtil;
+import com.github.martinfrank.javarouge.objects.MonsterPrototype;
 import com.github.martinfrank.maplib.MapStyle;
 
 public class MapUtils {
@@ -9,7 +9,13 @@ public class MapUtils {
         RougeMapPartFactory mapPartFactory = new RougeMapPartFactory();
         RougeMapFactory mapFactory = new RougeMapFactory(mapPartFactory);
         RougeMap map = mapFactory.createMap(width, height, MapStyle.SQUARE4);
-        MazeGeneratorUtil.generateMaze(map);
+
+//        populateMap(map);
         return map;
+    }
+
+    public static void populateMap(RougeMap map) {
+        MonsterPrototype goblin = null;
+
     }
 }
