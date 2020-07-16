@@ -6,6 +6,6 @@ import com.github.martinfrank.javarouge.model.maze.Terrain;
 public class WalkCostRules {
 
     public static double getEnteringTerrainCosts(Terrain terrain, Player player) {
-        return 1.45567;
+        return 1.85567;
     }
 }
